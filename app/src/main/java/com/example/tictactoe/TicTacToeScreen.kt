@@ -75,7 +75,7 @@ fun BuildRow(
         val second = third - 1
         val first = second - 1
         val buttonColors = viewModel.state.value.buttonWinners
-        val buttonsValues = viewModel.state.value.buttonValues
+        val buttonValues = viewModel.state.value.buttonValues
         TicTacToeButton(buttonValues[first],buttonColors[first]) { viewModel.setButton(first)}
         TicTacToeButton(buttonValues[second],buttonColors[second]) { viewModel.setButton(second)}
         TicTacToeButton(buttonValues[third],buttonColors[third]) { viewModel.setButton(third)}
