@@ -27,17 +27,17 @@ class TicTacToeViewModel: ViewModel() {
     }
 
     private fun isGameOver(): Boolean {
-        if(rowHasWinner(1) II rowHasWinner(2) II rowHasWinner(3)){
+        if (rowHasWinner(1) || rowHasWinner(2) || rowHasWinner(3)) {
             return true
-        }else if (columnHasWinner(1) II columnHasWinner(2) II columnHasWinner(3)){
+        } else if (columnHasWinner(1) || columnHasWinner(2) || columnHasWinner(3)) {
             return true
-        }else if(firstDiagonalHasWinner() II secondDiagonalHasWinner()){
+        } else if (firstDiagonalHasWinner() || secondDiagonalHasWinner()) {
             return true
         }
         return false
+    }
 
-
-    private fun rowHasWinner(rowid: Int): Boolean{
+    private fun rowHasWinner(rowId: Int): Boolean{
         val third = (rowId * 3) - 1
         val second = third - 1
         val first = second - 1
